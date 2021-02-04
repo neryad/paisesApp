@@ -5,12 +5,19 @@ import { PorPaisComponent } from './pages/por-pais/por-pais.component';
 import { PorRegionComponent } from './pages/por-region/por-region.component';
 import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 
-
-
 @NgModule({
-  declarations: [PorCapitalComponent, PorPaisComponent, PorRegionComponent, VerPaisComponent],
-  imports: [
-    CommonModule
-  ]
+  declarations: [
+    PorCapitalComponent,
+    PorPaisComponent,
+    PorRegionComponent,
+    VerPaisComponent,
+  ],
+  imports: [CommonModule],
+  exports: [
+    PorCapitalComponent,
+    PorPaisComponent,
+    PorRegionComponent,
+    VerPaisComponent,
+  ],
 })
-export class PaisModule { }
+export class PaisModule {}
