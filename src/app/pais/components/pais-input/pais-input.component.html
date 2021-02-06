@@ -3,7 +3,8 @@
     type="text"
     name="termino"
     [(ngModel)]="termino"
-    placeholder="Buscar pais..."
+    [placeholder]="placerHolder"
+    (input)="teclaPresionada()"
     class="form-control"
   />
 </form>

@@ -15,4 +15,21 @@ export class PaisService {
     const url = `${this.apiUrl}/name/${termino}`;
     return this.http.get<Country[]>(url);
   }
+
+  buscarCapital(termino: string): Observable<Country[]> {
+    const url = `${this.apiUrl}/capital/${termino}`;
+    return this.http.get<Country[]>(url);
+  }
+
+  buscarRegion(termino: string): Observable<Country[]> {
+    const url = `${this.apiUrl}/region/${termino}`;
+    return this.http.get<Country[]>(url);
+  }
+
+  buscarCodigo(id: string): Observable<Country> {
+    const url = `${this.apiUrl}/alpha/${id}`;
+    return this.http.get<Country>(url);
+  }
+
+  //https://restcountries.eu/rest/v2/alpha?codes=col;no;ee
 }
